@@ -1,0 +1,14 @@
+<h1>Welcome BBS.</h1>
+<form method="post">
+    <textarea name="send"></textarea>
+    <input type="submit" value="send">
+</form>
+
+
+<hr>
+<% @bbs.each do |v| %>
+    [<%= v.uid %>]
+    <%= v.content.html_safe %>
+    <hr>
+<% end %>
+
